@@ -1,8 +1,7 @@
 'use strict';
 
-// require plugins
+// require modules
 var gulp = require('gulp');
-var uglify = require('gulp-uglify');
 
 // define paths
 var path = {
@@ -27,18 +26,11 @@ var path = {
   tasks: 'tasks/*.js',
   tests: ['tests/*.js', 'tests/**/*.js']
 }
+// expose paths
+module.exports = path;
 
-// define tasks
-gulp.task('scripts', function() {
-  // Minify and copy all JavaScript (except vendor scripts)
-  gulp.src(path.client.modules)
-    .pipe(uglify())
-    .pipe(gulp.dest(path.build.modules));
-
-  // Copy vendor files
-  gulp.src(path.client.vendor)
-    .pipe(gulp.dest(path.build.vendor));
-});
+// require tasks
+require('./tasks/modules');
 
 // Copy all static assets
 gulp.task('copy', function() {
@@ -49,19 +41,26 @@ gulp.task('copy', function() {
     .pipe(gulp.dest(path.build.styles));
 });
 
-// The default task (called when you run `gulp`)
-gulp.task('default', function() {
-  gulp.run('scripts', 'copy');
-
-  // Watch files and run tasks if they change
+// Watch files and run tasks if they change
+gulp.task('watch', function(){
   gulp.watch(path.client.modules, function(event) {
-    gulp.run('scripts');
+    gulp.run(scripts);
   });
 
   gulp.watch([
     path.client.images,
     path.client.styles
-  ], function(event) {
+  ], 
+  function(event) {
     gulp.run('copy');
   });
+})
+
+// The default task (called when you run `gulp`)
+gulp.task('default', function() {
+  gulp.run( 
+    'modules',
+    'copy', 
+    'watch'
+  );
 });

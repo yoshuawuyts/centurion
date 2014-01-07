@@ -1,5 +1,5 @@
 {
-  "name": "tasks",
+  "name": "centurion",
   "version": "0.0.0",
   "description": "A tiny gulp configuration",
   "main": "index.js",
