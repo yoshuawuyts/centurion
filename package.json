@@ -1,5 +1,5 @@
 {
-  "name": "gulp",
+  "name": "tasks",
   "version": "0.0.0",
   "description": "A tiny gulp configuration",
   "main": "index.js",
@@ -18,5 +18,9 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/yoshuawuyts/gulp/issues"
+  },
+  "devDependencies": {
+    "gulp": "~3.2.4",
+    "gulp-uglify": "~0.1.0"
   }
 }
