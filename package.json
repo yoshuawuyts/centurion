@@ -1,0 +1,22 @@
+{
+  "name": "gulp",
+  "version": "0.0.0",
+  "description": "A tiny gulp configuration",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yoshuawuyts/gulp"
+  },
+  "keywords": [
+    "gulp",
+    "configuration"
+  ],
+  "author": "Yoshua Wuyts",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yoshuawuyts/gulp/issues"
+  }
+}
