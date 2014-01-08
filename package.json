@@ -21,6 +21,10 @@
   },
   "devDependencies": {
     "gulp": "~3.2.4",
-    "gulp-uglify": "~0.1.0"
+    "gulp-uglify": "~0.1.0",
+    "gulp-browserify": "~0.2.4",
+    "gulp-esformatter": "~0.1.0",
+    "gulp-eslint": "~0.1.0",
+    "eslint-stylish": "~0.1.5"
   }
 }

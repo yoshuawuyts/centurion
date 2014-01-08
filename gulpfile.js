@@ -26,7 +26,7 @@ module.exports = {
     all: 'client/**',
     fonts: 'client/fonts/**',
     images: 'client/images/**',
-    modules: ['client/modules/**/*.js', '!client/vendor/**'],
+    modules: 'client/modules/index.js',
     styles: 'client/styles/**',
     vendor: 'client/vendor'
   },
@@ -39,7 +39,8 @@ module.exports = {
  * Import tasks
  */
 
-require('./tasks/modules'); // browserify, esformatter, eslint
+require('./tasks/api');     // esformatter, eslint
+require('./tasks/modules'); // browserify, esformatter, eslint, uglify
 require('./tasks/server');  // nodemon, node-inspector
 require('./tasks/static');  // copy fonts + images
 require('./tasks/styles');  // resin
@@ -52,6 +53,7 @@ require('./tasks/watch');   // watch, livereload
 
 gulp.task('default', function() {
   gulp.run( 
+    'api',
     'modules',
     'static',
     'styles',
