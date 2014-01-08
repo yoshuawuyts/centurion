@@ -26,6 +26,14 @@
     "gulp-esformatter": "~0.1.0",
     "gulp-eslint": "~0.1.0",
     "eslint-stylish": "~0.1.5",
-    "gulp-nodemon": "0.0.3"
+    "gulp-nodemon": "0.0.3",
+    "gulp-rework": "~0.2.0",
+    "gulp-autoprefixer": "0.0.3",
+    "gulp-csso": "~0.1.7",
+    "rework-npm": "~0.3.0",
+    "rework-vars": "~2.0.2",
+    "rework-calc": "~0.2.1",
+    "rework-mixins": "~1.1.1",
+    "css-whitespace": "~1.1.0"
   }
 }
