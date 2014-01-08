@@ -4,12 +4,6 @@
  * Module dependencies
  */
 
-require('./tasks/modules'); // browserify, esformatter, eslint
-require('./tasks/server');  // nodemon, node-inspector
-require('./tasks/static');  // copy fonts + images
-require('./tasks/styles');  // resin
-require('./tasks/tests');   // mocha
-require('./tasks/watch');   // watch, livereload
 var gulp = require('gulp');
 
 /**
@@ -40,6 +34,17 @@ module.exports = {
   tasks: 'tasks/*.js',
   tests: ['tests/*.js', 'tests/**/*.js']
 }
+
+/**
+ * Import tasks
+ */
+
+require('./tasks/modules'); // browserify, esformatter, eslint
+require('./tasks/server');  // nodemon, node-inspector
+require('./tasks/static');  // copy fonts + images
+require('./tasks/styles');  // resin
+require('./tasks/tests');   // mocha
+require('./tasks/watch');   // watch, livereload
 
 /**
  * Default task

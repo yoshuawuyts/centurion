@@ -5,8 +5,8 @@
  */
 
 var gulp = require('gulp');
-var uglify = require('gulp-uglify');
 var path = require('../gulpfile');
+var uglify = require('gulp-uglify');
 
 /**
  * Expose 'gulp.task'
