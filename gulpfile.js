@@ -13,7 +13,11 @@ var gulp = require('gulp');
  */
 
 module.exports = {
-  api: ['api/*.js', 'api/**/*.js', 'api/**/**/*.js', 'api/**/**/**/*.js', 'api/**/**/**/**/*.js'],
+  api: {
+    all: ['api/*.js', 'api/**/*.js', 'api/**/**/*.js', 'api/**/**/**/*.js', 'api/**/**/**/**/*.js'],
+    index: 'api/index.js',
+    root: 'api/'
+  },
   build: {
     all: 'build/',
     fonts: 'build/fonts',
@@ -41,9 +45,10 @@ module.exports = {
 
 require('./tasks/api');     // esformatter, eslint
 require('./tasks/modules'); // browserify, esformatter, eslint, uglify
-require('./tasks/server');  // nodemon, node-inspector
+require('./tasks/server');  // nodemon
 require('./tasks/static');  // copy fonts + images
-require('./tasks/styles');  // resin
+require('./tasks/styles');  // rework, autoprefixer, csso
+require('./tasks/tasks');   // esformatter, eslint
 require('./tasks/tests');   // mocha
 require('./tasks/watch');   // watch, livereload
 

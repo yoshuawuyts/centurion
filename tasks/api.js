@@ -19,7 +19,7 @@ var eslintStylish = require ('eslint-stylish');
 module.exports = gulp.task('api', function() {
 
   // src
-  gulp.src(path.api)
+  gulp.src(path.api.all)
 
   // esformatter (https://github.com/millermedeiros/esformatter)
   .pipe(esformatter({
@@ -30,6 +30,6 @@ module.exports = gulp.task('api', function() {
   .pipe(eslint.format(eslintStylish))
 
   // dest
-  .pipe(gulp.dest(path.build.modules));
+  .pipe(gulp.dest(path.api.root));
 
 });
