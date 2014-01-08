@@ -27,9 +27,9 @@ module.exports = {
     vendor: 'build/vendor'
   },
   client: {
-    all: 'client/**',
+    all: ['client/**', 'client/**/**'],
     fonts: 'client/fonts/**',
-    images: 'client/images/**',
+    images: ['client/images/**', 'client/images/**/**'],
     modules: 'client/modules/index.js',
     styles: 'client/styles/**',
     vendor: 'client/vendor'

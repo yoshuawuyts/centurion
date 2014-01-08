@@ -15,4 +15,12 @@ var path = require('../gulpfile');
 
 module.exports = gulp.task('static', function() {
 
+  // fonts
+  gulp.src(path.client.fonts)
+  .pipe(gulp.dest(path.build.fonts));
+
+  // images
+  gulp.src(path.client.images)
+  .pipe(gulp.dest(path.build.images));
+
 });
