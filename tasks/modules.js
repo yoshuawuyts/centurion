@@ -20,7 +20,7 @@ var eslintStylish = require ('eslint-stylish');
 
 module.exports = gulp.task('modules', function() {
 
-  // Minify and copy all JavaScript (except vendor scripts)
+  // src
   gulp.src(path.client.modules)
 
   // browserify (https://github.com/deepak1556/gulp-browserify)
@@ -35,12 +35,13 @@ module.exports = gulp.task('modules', function() {
   }))
 
   // eslint (https://github.com/adametry/gulp-eslint)
-  .pipe(eslint({
-  }))
+  .pipe(eslint())
   .pipe(eslint.format(eslintStylish))
 
   // uglify (https://github.com/terinjokes/gulp-uglify)
   .pipe(uglify())
 
+  // dest
   .pipe(gulp.dest(path.build.modules));
+  
 });

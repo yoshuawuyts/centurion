@@ -13,7 +13,7 @@ var gulp = require('gulp');
  */
 
 module.exports = {
-  api: ['api/**', 'api/**/**', 'api/**/**/**', 'api/**/**/**/**', 'api/**/**/**/**/**'],
+  api: ['api/*.js', 'api/**/*.js', 'api/**/**/*.js', 'api/**/**/**/*.js', 'api/**/**/**/**/*.js'],
   build: {
     all: 'build/',
     fonts: 'build/fonts',
