@@ -4,7 +4,7 @@
 var gulp = require('gulp');
 
 // define paths
-var path = {
+module.exports = {
   api: ['api/**', 'api/**/**', 'api/**/**/**', 'api/**/**/**/**', 'api/**/**/**/**/**'],
   build: {
     all: 'build/',
@@ -26,41 +26,24 @@ var path = {
   tasks: 'tasks/*.js',
   tests: ['tests/*.js', 'tests/**/*.js']
 }
-// expose paths
-module.exports = path;
 
-// require tasks
-require('./tasks/modules');
+require('./tasks/modules'); // browserify, esformatter, eslint
+require('./tasks/server');  // nodemon, node-inspector
+require('./tasks/static');  // copy fonts + images
+require('./tasks/styles');  // resin
+require('./tasks/tests');   // mocha
+require('./tasks/watch');   // watch, livereload
 
-// Copy all static assets
-gulp.task('copy', function() {
-  gulp.src(path.client.images)
-    .pipe(gulp.dest(path.build.images));
-
-  gulp.src(path.client.styles)
-    .pipe(gulp.dest(path.build.styles));
-});
-
-// Watch files and run tasks if they change
-gulp.task('watch', function(){
-  gulp.watch(path.client.modules, function(event) {
-    gulp.run(scripts);
-  });
-
-  gulp.watch([
-    path.client.images,
-    path.client.styles
-  ], 
-  function(event) {
-    gulp.run('copy');
-  });
-})
-
-// The default task (called when you run `gulp`)
+// Default task (called when you run `gulp`)
 gulp.task('default', function() {
   gulp.run( 
     'modules',
-    'copy', 
+    'static',
+    'styles',
+    'tests'
+  );
+  gulp.run(
+    'server',
     'watch'
   );
 });
