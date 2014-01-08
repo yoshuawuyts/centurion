@@ -13,6 +13,4 @@ var path = require('../gulpfile');
  * @api public
  */
 
-module.exports = gulp.task('tests', function() {
-
-});
+module.exports = gulp.task('tests', function(){});

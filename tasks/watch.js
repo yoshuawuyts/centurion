@@ -13,6 +13,4 @@ var path = require('../gulpfile');
  * @api public
  */
 
-module.exports = gulp.task('watch', function() {
-
-});
+module.exports = gulp.task('watch', function(){});

@@ -24,28 +24,28 @@ module.exports = gulp.task('modules', function() {
   // src
   gulp.src(path.client.modules)
 
-  // browserify (https://github.com/deepak1556/gulp-browserify)
-  .pipe(browserify({
-    buffer: false,
-    debug: true,
-  }))
+    // browserify (https://github.com/deepak1556/gulp-browserify)
+    .pipe(browserify({
+      buffer: false,
+      debug: true
+    }))
 
-  // esformatter (https://github.com/millermedeiros/esformatter)
-  .pipe(esformatter({
-    preset: 'default'
-  }))
+    // esformatter (https://github.com/millermedeiros/esformatter)
+    .pipe(esformatter({
+      preset: 'default'
+    }))
 
-  // eslint (https://github.com/adametry/gulp-eslint)
-  .pipe(eslint())
-  .pipe(eslint.format(eslintStylish))
+    // eslint (https://github.com/adametry/gulp-eslint)
+    .pipe(eslint())
+    .pipe(eslint.format(eslintStylish))
 
-  // uglify (https://github.com/terinjokes/gulp-uglify)
-  .pipe(uglify())
+    // uglify (https://github.com/terinjokes/gulp-uglify)
+    .pipe(uglify())
 
-  // rename
-  .pipe(rename('scripts.js'))
+    // rename
+    .pipe(rename('scripts.js'))
 
-  // dest
-  .pipe(gulp.dest(path.build.modules));
-  
+    // dest
+    .pipe(gulp.dest(path.build.modules));
+
 });

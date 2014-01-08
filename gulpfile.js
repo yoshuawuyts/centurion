@@ -35,7 +35,11 @@ module.exports = {
     vendor: 'client/vendor'
   },
 
-  tasks: 'tasks/*.js',
+  tasks: {
+    all: 'tasks/*.js',
+    root: 'tasks/'
+  },
+
   tests: ['tests/*.js', 'tests/**/*.js']
 }
 
@@ -62,6 +66,7 @@ gulp.task('default', function() {
     'modules',
     'static',
     'styles',
+    'tasks',
     'tests'
   );
   gulp.run(

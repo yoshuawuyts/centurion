@@ -25,26 +25,27 @@ module.exports = gulp.task('styles', function() {
   // src
   gulp.src(path.client.styles)
 
-  // rework (https://github.com/sindresorhus/gulp-rework)
-  .pipe(rework(
-    npm(),            // @import (https://github.com/conradz/rework-npm)
-    rework.colors(),  // dynamic colors (https://github.com/reworkcss/rework#colors)
-    rework.extend(),  // class extensions (https://github.com/reworkcss/rework#extend)
+    // rework (https://github.com/sindresorhus/gulp-rework)
+    .pipe(rework(
+    npm(), // @import (https://github.com/conradz/rework-npm)
+    rework.colors(), // dynamic colors (https://github.com/reworkcss/rework#colors)
+    rework.extend(), // class extensions (https://github.com/reworkcss/rework#extend)
     // breakpoints(),    // better breakpoints (https://github.com/reworkcss/rework-breakpoints)
-    vars(),           // variables (https://github.com/reworkcss/rework-vars)
-    {sourcemap: true}
-  ))
+    vars(), // variables (https://github.com/reworkcss/rework-vars)
+    {
+      sourcemap: true
+    }))
 
-  // autoprefixer (https://github.com/Metrime/gulp-autoprefixer)
-  .pipe(autoprefixer("last 2 versions", "> 1%", "ie 10"))
+    // autoprefixer (https://github.com/Metrime/gulp-autoprefixer)
+    .pipe(autoprefixer("last 2 versions", "> 1%", "ie 10"))
 
-  // csso (https://github.com/ben-eb/gulp-csso)
-  .pipe(csso())
+    // csso (https://github.com/ben-eb/gulp-csso)
+    .pipe(csso())
 
-  // rename file
-  .pipe(rename("styles.css"))
+    // rename file
+    .pipe(rename("styles.css"))
 
-  // dest
-  .pipe(gulp.dest(path.build.styles));
+    // dest
+    .pipe(gulp.dest(path.build.styles));
 
 });

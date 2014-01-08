@@ -8,7 +8,7 @@ var path = require('../gulpfile');
 var gulp = require('gulp');
 var esformatter = require('gulp-esformatter');
 var eslint = require('gulp-eslint');
-var eslintStylish = require ('eslint-stylish');
+var eslintStylish = require('eslint-stylish');
 
 /**
  * Expose 'gulp.task'
@@ -21,15 +21,15 @@ module.exports = gulp.task('api', function() {
   // src
   gulp.src(path.api.all)
 
-  // esformatter (https://github.com/millermedeiros/esformatter)
-  .pipe(esformatter({
-  }))
+    // esformatter (https://github.com/millermedeiros/esformatter)
+    .pipe(esformatter({
+    }))
 
-  // eslint (https://github.com/adametry/gulp-eslint)
-  .pipe(eslint())
-  .pipe(eslint.format(eslintStylish))
+    // eslint (https://github.com/adametry/gulp-eslint)
+    .pipe(eslint())
+    .pipe(eslint.format(eslintStylish))
 
-  // dest
-  .pipe(gulp.dest(path.api.root));
+    // dest
+    .pipe(gulp.dest(path.api.root));
 
 });
