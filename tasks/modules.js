@@ -10,7 +10,8 @@ var browserify = require('gulp-browserify');
 var uglify = require('gulp-uglify');
 var esformatter = require('gulp-esformatter');
 var eslint = require('gulp-eslint');
-var eslintStylish = require ('eslint-stylish');
+var eslintStylish = require('eslint-stylish');
+var rename = require('gulp-rename');
 
 /**
  * Expose 'gulp.task'
@@ -40,6 +41,9 @@ module.exports = gulp.task('modules', function() {
 
   // uglify (https://github.com/terinjokes/gulp-uglify)
   .pipe(uglify())
+
+  // rename
+  .pipe(rename('scripts.js'))
 
   // dest
   .pipe(gulp.dest(path.build.modules));

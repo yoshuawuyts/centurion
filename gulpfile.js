@@ -1,4 +1,4 @@
-'use strict';
+  'use strict';
 
 /**
  * Module dependencies
@@ -31,7 +31,7 @@ module.exports = {
     fonts: 'client/fonts/**',
     images: ['client/images/**', 'client/images/**/**'],
     modules: 'client/modules/index.js',
-    styles: 'client/styles/**',
+    styles: 'client/styles/index.css',
     vendor: 'client/vendor'
   },
 
