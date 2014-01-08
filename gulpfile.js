@@ -1,9 +1,23 @@
 'use strict';
 
-// require modules
+/**
+ * Module dependencies
+ */
+
+require('./tasks/modules'); // browserify, esformatter, eslint
+require('./tasks/server');  // nodemon, node-inspector
+require('./tasks/static');  // copy fonts + images
+require('./tasks/styles');  // resin
+require('./tasks/tests');   // mocha
+require('./tasks/watch');   // watch, livereload
 var gulp = require('gulp');
 
-// define paths
+/**
+ * Export directory paths
+ *
+ * @api public
+ */
+
 module.exports = {
   api: ['api/**', 'api/**/**', 'api/**/**/**', 'api/**/**/**/**', 'api/**/**/**/**/**'],
   build: {
@@ -27,14 +41,10 @@ module.exports = {
   tests: ['tests/*.js', 'tests/**/*.js']
 }
 
-require('./tasks/modules'); // browserify, esformatter, eslint
-require('./tasks/server');  // nodemon, node-inspector
-require('./tasks/static');  // copy fonts + images
-require('./tasks/styles');  // resin
-require('./tasks/tests');   // mocha
-require('./tasks/watch');   // watch, livereload
+/**
+ * Default task
+ */
 
-// Default task (called when you run `gulp`)
 gulp.task('default', function() {
   gulp.run( 
     'modules',
