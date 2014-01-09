@@ -20,13 +20,16 @@ var rename = require('gulp-rename');
 
 module.exports = gulp.task('modules', function() {
 
+  // src
+  gulp.src(path.modules.index)
+/*
   // watch
   watch({
     glob: path.modules.src,
     name: 'modules'
   })
     .pipe(plumber())
-
+*/
     // browserify (https://github.com/deepak1556/gulp-browserify)
     .pipe(browserify({
       buffer: false,
