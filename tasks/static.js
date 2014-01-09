@@ -16,11 +16,11 @@ var path = require('../gulpfile');
 module.exports = gulp.task('static', function() {
 
   // fonts
-  gulp.src(path.client.fonts)
-    .pipe(gulp.dest(path.build.fonts));
+  gulp.src(path.fonts.src)
+    .pipe(gulp.dest(path.fonts.dest));
 
   // images
-  gulp.src(path.client.images)
-    .pipe(gulp.dest(path.build.images));
+  gulp.src(path.images.src)
+    .pipe(gulp.dest(path.images.dest));
 
 });

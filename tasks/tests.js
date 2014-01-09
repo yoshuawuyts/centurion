@@ -19,7 +19,7 @@ var eslintStylish = require('eslint-stylish');
 
 module.exports = gulp.task('tests', function() {
 
-  gulp.src(path.tests.integration)
+  gulp.src(path.tests.index)
 
     // run tests
     .pipe(mocha());

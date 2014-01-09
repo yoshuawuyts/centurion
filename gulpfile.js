@@ -14,56 +14,39 @@ var gulp = require('gulp');
 
 module.exports = {
   api: {
-    all: ['api/*.js', 'api/**/*.js', 'api/**/**/*.js', 'api/**/**/**/*.js', 'api/**/**/**/**/*.js'],
-    index: 'api/index.js',
-    root: 'api/',
-    tests: 'api/test.js'
+    src: ['api/*.js', 'api/**/*.js', 'api/**/**/*.js', 'api/**/**/**/*.js', 'api/**/**/**/**/*.js'],
+    cwd: 'api/',
+    tests: 'api/test.js',
+    index: 'api/index.js'
   },
-  build: {
-    all: 'build/',
-    fonts: 'build/fonts',
-    images: 'build/images',
-    modules: 'build/js',
-    styles: 'build/styles',
-    vendor: 'build/vendor'
+  fonts: {
+    src: 'client/fonts/**',
+    dest: 'build/fonts'
   },
-  client: {
-    all: ['client/**', 'client/**/**'],
-    fonts: 'client/fonts/**',
-    images: ['client/images/**', 'client/images/**/**'],
-    modules: 'client/modules/index.js',
-    styles: 'client/styles/index.css',
-    tests: 'client/modules/tests.js',
-    vendor: 'client/vendor'
+  images: {
+    src: 'client/images/**',
+    dest: 'build/images/'
   },
-
-  lint: {
-    api: {
-      src: ['api/*.js', 'api/**/*.js', 'api/**/**/*.js', 'api/**/**/**/*.js', 'api/**/**/**/**/*.js'],
-      dest: 'api/'
-    },
-    modules: {
-      src: ['client/modules/*.js', 'client/modules/**/*.js', 'client/modules/**/**/*.js', 'client/modules/**/**/**/*.js', 'client/modules/**/**/**/**/*.js'],
-      dest: 'client/modules/'
-    },
-    tasks: {
-      src: 'tasks/*.js',
-      dest: 'tasks/'
-    },
-    tests: {
-      src: ['tests/*.js', 'tests/**/*.js', 'tests/**/**/*.js'],
-      dest: 'tests/'
-    }
+  modules: {
+    src: ['client/modules/*.js', 'client/modules/**/*.js', 'client/modules/**/**/*.js', 'client/modules/**/**/**/*.js', 'client/modules/**/**/**/**/*.js'],
+    cwd: 'client/modules/',
+    dest: 'build/modules',
+    index: 'client/modules/index.js'
   },
-
+  styles: {
+    src: ['client/styles/*.css', 'client/styles/**/*.css', 'client/styles/**/**/*.css'],
+    cwd: 'client/styles/',
+    dest: 'build/styles',
+    index: 'client/styles/index.css',
+  },
   tasks: {
-    all: 'tasks/*.js',
-    root: 'tasks/'
+    src: 'tasks/*.js',
+    cwd: 'tasks/'
   },
-
   tests: {
-    integration: 'tests/test.js',
-    root: 'tests/'
+    src: ['tests/*.js', 'tests/**/*.js', 'tests/**/**/*.js'],
+    cwd: 'tests/',
+    index: 'tests/test.js'
   }
 }
 

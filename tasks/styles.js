@@ -22,16 +22,14 @@ var breakpoints = require('rework-breakpoints');
 
 module.exports = gulp.task('styles', function() {
 
-  // src
-  gulp.src(path.client.styles)
+  gulp.src(path.styles.index)
 
-    // rework (https://github.com/sindresorhus/gulp-rework)
+    // rework
     .pipe(rework(
-    npm(), // @import (https://github.com/conradz/rework-npm)
-    rework.colors(), // dynamic colors (https://github.com/reworkcss/rework#colors)
-    rework.extend(), // class extensions (https://github.com/reworkcss/rework#extend)
-    // breakpoints(),    // better breakpoints (https://github.com/reworkcss/rework-breakpoints)
-    vars(), // variables (https://github.com/reworkcss/rework-vars)
+    npm(), // @import
+    rework.colors(), // dynamic colors
+    rework.extend(), // class extensions
+    vars(), // variables
     {
       sourcemap: true
     }))
@@ -46,6 +44,6 @@ module.exports = gulp.task('styles', function() {
     .pipe(rename("styles.css"))
 
     // dest
-    .pipe(gulp.dest(path.build.styles));
+    .pipe(gulp.dest(path.styles.dest));
 
 });

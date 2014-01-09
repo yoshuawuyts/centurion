@@ -19,7 +19,7 @@ var rename = require('gulp-rename');
 module.exports = gulp.task('modules', function() {
 
   // src
-  gulp.src(path.client.modules)
+  gulp.src(path.modules.index)
 
     // browserify (https://github.com/deepak1556/gulp-browserify)
     .pipe(browserify({
@@ -34,6 +34,6 @@ module.exports = gulp.task('modules', function() {
     .pipe(rename('scripts.js'))
 
     // dest
-    .pipe(gulp.dest(path.build.modules));
+    .pipe(gulp.dest(path.modules.dest));
 
 });
