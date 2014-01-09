@@ -6,6 +6,8 @@
 
 var path = require('../gulpfile');
 var gulp = require('gulp');
+var watch = require('gulp-watch');
+var plumber = require('gulp-plumber');
 var browserify = require('gulp-browserify');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
@@ -18,8 +20,12 @@ var rename = require('gulp-rename');
 
 module.exports = gulp.task('modules', function() {
 
-  // src
-  gulp.src(path.modules.index)
+  // watch
+  watch({
+    glob: path.modules.src,
+    name: 'modules'
+  })
+    .pipe(plumber())
 
     // browserify (https://github.com/deepak1556/gulp-browserify)
     .pipe(browserify({

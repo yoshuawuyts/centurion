@@ -7,6 +7,7 @@
 var gulp = require('gulp');
 var path = require('../gulpfile');
 
+
 /**
  * Expose 'gulp.task'
  *
@@ -16,7 +17,7 @@ var path = require('../gulpfile');
 module.exports = gulp.task('watch', function() {
 
   // api
-  gulp.watch(path.api.src, function(event) {
+  gulp.src(path.api.src, function(event) {
     gulp.run('lint', 'tests');
   });
 

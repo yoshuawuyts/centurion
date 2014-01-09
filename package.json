@@ -37,6 +37,12 @@
     "css-whitespace": "~1.1.0",
     "gulp-rename": "~0.2.1",
     "rework-breakpoints": "~0.4.0",
-    "gulp-mocha": "~0.2.0"
+    "gulp-mocha": "~0.2.0",
+    "gulp-plumber": "~0.4.1",
+    "gulp-watch": "~0.3.3"
+  },
+  "dependencies": {
+    "gulp-livereload": "~0.1.1",
+    "tiny-lr": "0.0.5"
   }
 }

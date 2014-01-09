@@ -24,23 +24,14 @@ module.exports = gulp.task('styles', function() {
 
   gulp.src(path.styles.index)
 
-    // rework
     .pipe(rework(
-    npm(), // @import
-    rework.colors(), // dynamic colors
-    rework.extend(), // class extensions
-    vars(), // variables
-    {
-      sourcemap: true
-    }))
+    npm(), // future spec
+    vars(), // enhancements
+    rework.colors(), rework.extend(), breakpoints))
 
-    // autoprefixer (https://github.com/Metrime/gulp-autoprefixer)
+    // prefix, optimize, rename
     .pipe(autoprefixer("last 2 versions", "> 1%", "ie 10"))
-
-    // csso (https://github.com/ben-eb/gulp-csso)
     .pipe(csso())
-
-    // rename file
     .pipe(rename("styles.css"))
 
     // dest

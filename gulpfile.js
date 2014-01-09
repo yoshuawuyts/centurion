@@ -30,7 +30,7 @@ module.exports = {
   modules: {
     src: ['client/modules/*.js', 'client/modules/**/*.js', 'client/modules/**/**/*.js', 'client/modules/**/**/**/*.js', 'client/modules/**/**/**/**/*.js'],
     cwd: 'client/modules/',
-    dest: 'build/modules',
+    dest: 'build/js',
     index: 'client/modules/index.js'
   },
   styles: {
@@ -40,7 +40,7 @@ module.exports = {
     index: 'client/styles/index.css',
   },
   tasks: {
-    src: 'tasks/*.js',
+    src: 'tasks/index.js',
     cwd: 'tasks/'
   },
   tests: {
@@ -75,7 +75,6 @@ gulp.task('default', function() {
     'tests'
   );
   gulp.run(
-    'server',
-    'watch'
+    'server'
   );
 });

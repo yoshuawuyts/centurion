@@ -6,10 +6,9 @@
 
 var gulp = require('gulp');
 var path = require('../gulpfile');
+var watch = require('gulp-watch');
+var plumber = require('gulp-plumber');
 var mocha = require('gulp-mocha');
-var esformatter = require('gulp-esformatter');
-var eslint = require('gulp-eslint');
-var eslintStylish = require('eslint-stylish');
 
 /**
  * Expose 'gulp.task'
