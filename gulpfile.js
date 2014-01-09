@@ -16,7 +16,8 @@ module.exports = {
   api: {
     all: ['api/*.js', 'api/**/*.js', 'api/**/**/*.js', 'api/**/**/**/*.js', 'api/**/**/**/**/*.js'],
     index: 'api/index.js',
-    root: 'api/'
+    root: 'api/',
+    tests: 'api/test.js'
   },
   build: {
     all: 'build/',
@@ -32,7 +33,27 @@ module.exports = {
     images: ['client/images/**', 'client/images/**/**'],
     modules: 'client/modules/index.js',
     styles: 'client/styles/index.css',
+    tests: 'client/modules/tests.js',
     vendor: 'client/vendor'
+  },
+
+  lint: {
+    api: {
+      src: ['api/*.js', 'api/**/*.js', 'api/**/**/*.js', 'api/**/**/**/*.js', 'api/**/**/**/**/*.js'],
+      dest: 'api/'
+    },
+    modules: {
+      src: ['client/modules/*.js', 'client/modules/**/*.js', 'client/modules/**/**/*.js', 'client/modules/**/**/**/*.js', 'client/modules/**/**/**/**/*.js'],
+      dest: 'client/modules/'
+    },
+    tasks: {
+      src: 'tasks/*.js',
+      dest: 'tasks/'
+    },
+    tests: {
+      src: ['tests/*.js', 'tests/**/*.js', 'tests/**/**/*.js'],
+      dest: 'tests/'
+    }
   },
 
   tasks: {
@@ -40,19 +61,21 @@ module.exports = {
     root: 'tasks/'
   },
 
-  tests: ['tests/*.js', 'tests/**/*.js']
+  tests: {
+    integration: 'tests/test.js',
+    root: 'tests/'
+  }
 }
 
 /**
  * Import tasks
  */
 
-require('./tasks/api');     // esformatter, eslint
-require('./tasks/modules'); // browserify, esformatter, eslint, uglify
+require('./tasks/lint');    // esformatter, eslint
+require('./tasks/modules'); // browserify, uglify
 require('./tasks/server');  // nodemon
 require('./tasks/static');  // copy fonts + images
 require('./tasks/styles');  // rework, autoprefixer, csso
-require('./tasks/tasks');   // esformatter, eslint
 require('./tasks/tests');   // mocha
 require('./tasks/watch');   // watch, livereload
 
@@ -62,11 +85,10 @@ require('./tasks/watch');   // watch, livereload
 
 gulp.task('default', function() {
   gulp.run( 
-    'api',
     'modules',
     'static',
     'styles',
-    'tasks',
+    'lint',
     'tests'
   );
   gulp.run(
