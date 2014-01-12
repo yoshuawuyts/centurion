@@ -1,6 +1,6 @@
 # Centurion
 
-A tiny [gulp](https://github.com/gulpjs/gulp) configuration
+> A tiny [gulp](https://github.com/gulpjs/gulp) configuration
 
 ## Installation
 ````npm i --save-dev centurion````
