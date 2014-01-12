@@ -12,7 +12,7 @@ modules // browserify, uglify
 server  // nodemon
 static  // copy fonts + images
 styles  // rework, autoprefixer, csso
-mocha   // mocha
+tests   // mocha
 ````
 
 ## Config
