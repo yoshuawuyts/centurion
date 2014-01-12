@@ -39,7 +39,9 @@
     "rework-breakpoints": "~0.4.0",
     "gulp-mocha": "~0.2.0",
     "gulp-plumber": "~0.4.1",
-    "gulp-watch": "~0.3.3"
+    "gulp-watch": "~0.3.3",
+    "gulp-grep-stream": "0.0.2",
+    "gulp-debug": "~0.1.2"
   },
   "dependencies": {
     "gulp-livereload": "~0.1.1",

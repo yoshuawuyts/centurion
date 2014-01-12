@@ -5,7 +5,7 @@
  */
 
 var gulp = require('gulp');
-var path = require('../gulpfile');
+var path = require('../config.json');
 var nodemon = require('gulp-nodemon');
 
 /**

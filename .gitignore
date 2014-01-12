@@ -18,3 +18,4 @@ node_modules
 api/
 client/
 build/
+./server.js
