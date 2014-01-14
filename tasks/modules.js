@@ -36,7 +36,7 @@ module.exports = gulp.task('modules', function() {
         debug: true
       }))
       .pipe(uglify())
-      .pipe(rename('scripts.js'))
+      .pipe(rename(path.modules.rename))
 
       // dest
       .pipe(gulp.dest(path.modules.dest));

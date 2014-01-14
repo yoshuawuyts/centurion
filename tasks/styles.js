@@ -25,14 +25,16 @@ module.exports = gulp.task('styles', function() {
   gulp.src(path.styles.index)
 
     .pipe(rework(
-    npm(), // future spec
-    vars(), // enhancements
+    npm(), 
+    // future spec
+    vars(), 
+    // enhancements
     rework.colors(), rework.extend(), breakpoints))
 
     // prefix, optimize, rename
     .pipe(autoprefixer("last 2 versions", "> 1%", "ie 10"))
     .pipe(csso())
-    .pipe(rename("styles.css"))
+    .pipe(rename(path.styles.rename))
 
     // dest
     .pipe(gulp.dest(path.styles.dest));

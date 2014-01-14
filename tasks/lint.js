@@ -25,7 +25,7 @@ module.exports = gulp.task('lint', function() {
   // api
   gulp.src(path.api.src)
     .pipe(watch({
-      name: 'lint.api'
+      name: 'Lint: api'
     }))
     .pipe(esformatter())
     .pipe(eslint())
@@ -36,7 +36,7 @@ module.exports = gulp.task('lint', function() {
   // modules
   gulp.src(path.modules.src)
     .pipe(watch({
-      name: 'lint.modules'
+      name: 'Lint: modules'
     }))
     .pipe(plumber())
     .pipe(esformatter())
@@ -47,7 +47,7 @@ module.exports = gulp.task('lint', function() {
   // tasks
   gulp.src(path.tasks.src)
     .pipe(watch({
-      name: 'lint.tasks',
+      name: 'Lint: tasks',
     }))
     .pipe(plumber())
     .pipe(esformatter())
@@ -58,7 +58,7 @@ module.exports = gulp.task('lint', function() {
   // tests
   gulp.src(path.tests.src)
     .pipe(watch({
-      name: 'lint.tests'
+      name: 'Lint: tests'
     }))
     .pipe(plumber())
     .pipe(esformatter())
