@@ -34,7 +34,7 @@
     "gulp-rename": "~0.2.1",
     "gulp-mocha": "~0.2.0",
     "gulp-plumber": "~0.4.1",
-    "gulp-watch": "~0.3.3",
+    "gulp-watch": "~0.4.1",
     "gulp-grep-stream": "0.0.2",
     "gulp-debug": "~0.1.2",
     "rework-npm": "~0.3.0",
@@ -42,7 +42,8 @@
     "rework-calc": "~0.2.1",
     "rework-breakpoints": "~0.4.0",
     "tiny-lr": "0.0.5",
-    "gulp-concat": "~2.1.7"
+    "gulp-concat": "~2.1.7",
+    "gulp-batch": "~0.4.0"
   },
   "dependencies": {}
 }

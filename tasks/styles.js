@@ -25,10 +25,8 @@ module.exports = gulp.task('styles', function() {
   gulp.src(path.styles.index)
 
     .pipe(rework(
-    npm(), 
-    // future spec
-    vars(), 
-    // enhancements
+    npm(), // future spec
+    vars(), // enhancements
     rework.colors(), rework.extend(), breakpoints))
 
     // prefix, optimize, rename
