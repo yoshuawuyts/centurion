@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/yoshuawuyts/gulp/issues"
   },
-  "devDependencies": {
+  "dependencies": {
     "gulp": "~3.2.4",
     "gulp-uglify": "~0.1.0",
     "gulp-browserify": "~0.2.4",
@@ -33,10 +33,8 @@
     "gulp-csso": "~0.1.7",
     "gulp-rename": "~0.2.1",
     "gulp-mocha": "~0.2.0",
-    "gulp-plumber": "~0.4.1",
-    "gulp-watch": "~0.4.1",
+    "gulp-watch": "~0.3.3",
     "gulp-grep-stream": "0.0.2",
-    "gulp-debug": "~0.1.2",
     "rework-npm": "~0.3.0",
     "rework-vars": "~2.0.2",
     "rework-calc": "~0.2.1",
@@ -45,5 +43,8 @@
     "gulp-concat": "~2.1.7",
     "gulp-batch": "~0.4.0"
   },
-  "dependencies": {}
+  "devDependencies": {
+    "gulp-debug": "~0.1.2",
+    "gulp-plumber": "~0.4.1"
+  }
 }
