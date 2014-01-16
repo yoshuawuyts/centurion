@@ -9,7 +9,7 @@
     ],
     "cwd": "api/",
     "tests": "api/test.js",
-    "index": "api/index.js"
+    "index": "api/server.js"
   },
 
   "fonts": {
