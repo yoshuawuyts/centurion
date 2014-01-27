@@ -1,0 +1,75 @@
+{
+  "api": {
+    "src": [
+      "api/*.js",
+      "api/**/*.js",
+      "api/**/**/*.js",
+      "api/**/**/**/*.js",
+      "api/**/**/**/**/*.js"
+    ],
+    "cwd": "api/",
+    "tests": "api/test.js",
+    "index": "api/server.js"
+  },
+
+  "fonts": {
+    "src": "client/fonts/**",
+    "dest": "build/fonts"
+  },
+
+  "html": {
+    "src": "client/index.html",
+    "dest": "build/"
+    },
+
+  "images": {
+    "src": "client/images/**",
+    "dest": "build/images/"
+  },
+
+  "modules": {
+    "src": [
+      "client/modules/*.js",
+      "client/modules/**/*.js",
+      "client/modules/**/**/*.js",
+      "client/modules/**/**/**/*.js",
+      "client/modules/**/**/**/**/*.js"
+    ],
+    "cwd": "client/modules/",
+    "dest": "build/scripts/",
+    "index": "client/modules/index.js",
+    "rename": "scripts.js"
+  },
+
+  "styles": {
+    "src": [
+      "client/styles/*.css",
+      "client/styles/**/*.css",
+      "client/styles/**/**/*.css"
+     ],
+    "cwd": "client/styles/",
+    "dest": "build/styles",
+    "index": "client/styles/index.css",
+    "rename": "styles.css"
+  },
+
+  "tasks": {
+    "src": "tasks/*.js",
+    "cwd": "tasks/"
+  },
+
+  "tests": {
+    "src": [
+      "tests/index.js"
+    ],
+    "cwd": "tests/",
+    "index": "tests/test.js"
+  },
+  
+  "vendor": {
+    "src": ["client/vendor/**/*min.js", "client/vendor/**/*min.map"],
+    "dest": "build/vendor",
+    "cwd": "client/vendor/",
+    "rename": "vendor.js"
+  }
+}

@@ -4,7 +4,7 @@
  * Module dependencies
  */
 
-var path = require('../config.json');
+var path = require('./config.json');
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 
@@ -18,6 +18,5 @@ module.exports = gulp.task('vendor', function() {
   gulp.src(path.vendor.src)
 
     // concat, rename, write
-    .pipe(concat(path.vendor.rename))
     .pipe(gulp.dest(path.vendor.dest));
 });

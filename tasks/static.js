@@ -5,7 +5,7 @@
  */
 
 var gulp = require('gulp');
-var path = require('../config.json');
+var path = require('./config.json');
 
 /**
  * Expose 'gulp.task'
@@ -22,5 +22,9 @@ module.exports = gulp.task('static', function() {
   // images
   gulp.src(path.images.src)
     .pipe(gulp.dest(path.images.dest));
+
+  // index.html
+  gulp.src(path.html.src)
+    .pipe(gulp.dest(path.html.dest));
 
 });
