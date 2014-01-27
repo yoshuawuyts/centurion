@@ -14,9 +14,12 @@ results
 npm-debug.log
 node_modules
 
+# files
+./server.js
+
 # folders
 api/
-client/
 build/
-./server.js
+client/
 modules/
+tests/
