@@ -20,7 +20,6 @@ var gulp = require('gulp');
 
 module.exports = gulp.task('lint', function() {
 
-  // api
   return es.concat(
     gulp.src(path.api.src)
       .pipe(gulp.dest(path.api.cwd)),

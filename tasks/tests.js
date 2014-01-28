@@ -6,7 +6,6 @@
 
 var gulp = require('gulp');
 var path = require('./config.json');
-var debug = require('gulp-debug');
 var browserify = require('gulp-browserify');
 var watch = require('gulp-watch');
 var mocha = require('gulp-mocha');

@@ -32,6 +32,6 @@ module.exports = gulp.task('default', function() {
     'tests' 
   );
   gulp.run(
-    'server'
+//    'server'
   );
 });
