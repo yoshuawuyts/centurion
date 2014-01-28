@@ -16,17 +16,14 @@
   "bugs": {
     "url": "https://github.com/yoshuawuyts/centurion/issues"
   },
-  "dependencies": {},
-  "devDependencies": {
-    "backbone": "~1.1.0",
+  "dependencies": {
     "eslint-stylish": "~0.2.0",
     "gulp": "~3.5.0",
     "gulp-autoprefixer": "0.0.4",
     "gulp-batch": "~0.4.0",
     "gulp-browserify": "~0.3.3",
     "gulp-concat": "~2.1.7",
-    "gulp-csso": "~0.2.2",
-    "gulp-debug": "~0.1.2",
+    "gulp-csso": "~0.2.3",
     "gulp-esformatter": "~0.1.0",
     "gulp-eslint": "~0.1.1",
     "gulp-grep-stream": "0.0.2",
@@ -37,12 +34,15 @@
     "gulp-rework": "~0.2.0",
     "gulp-uglify": "~0.2.0",
     "gulp-watch": "~0.5.0",
-    "mocha": "~1.17.0",
     "rework-breakpoints": "~0.6.0",
     "rework-calc": "~0.2.1",
     "rework-npm": "~0.3.0",
     "rework-vars": "~2.0.2",
     "tiny-lr": "0.0.5",
     "event-stream": "~3.1.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.17.0",
+    "gulp-debug": "~0.1.2"
   }
 }

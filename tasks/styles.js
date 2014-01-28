@@ -10,7 +10,7 @@ var rename = require('gulp-rename');
 var rework = require('gulp-rework');
 var path = require('./config.json');
 var vars = require('rework-vars');
-//var csso = require('gulp-csso');
+var csso = require('gulp-csso');
 var npm = require('rework-npm');
 var gulp = require('gulp');
 
@@ -30,7 +30,7 @@ module.exports = gulp.task('styles', function() {
 
     // prefix, optimize, rename
     .pipe(autoprefixer("last 2 versions", "> 1%", "ie 10"))
-//    .pipe(csso(true))
+    .pipe(csso(true))
     .pipe(rename(path.styles.rename))
 
     // dest
