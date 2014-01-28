@@ -4,12 +4,13 @@
  * Module dependencies
  */
 
-var path = require('./config.json');
-var gulp = require('gulp');
-var watch = require('gulp-watch');
-var esformatter = require('gulp-esformatter');
-var eslint = require('gulp-eslint');
 var eslintStylish = require('eslint-stylish');
+var esformatter = require('gulp-esformatter');
+var path = require('./config.json');
+var eslint = require('gulp-eslint');
+var watch = require('gulp-watch');
+var es = require('event-stream');
+var gulp = require('gulp');
 
 /**
  * Expose 'gulp.task'
@@ -20,43 +21,18 @@ var eslintStylish = require('eslint-stylish');
 module.exports = gulp.task('lint', function() {
 
   // api
-  gulp.src(path.api.src)
-    .pipe(watch(function(files) {
-    return files
+  return es.concat(
+    gulp.src(path.api.src)
+      .pipe(gulp.dest(path.api.cwd)),
+    gulp.src(path.modules.src)
+      .pipe(gulp.dest(path.modules.cwd)),
+    gulp.src(path.tasks.src)
+      .pipe(gulp.dest(path.tasks.cwd)),
+    gulp.src(path.tests.src)
+      .pipe(gulp.dest(path.tests.cwd))
+  )
     .pipe(esformatter())
     .pipe(eslint())
     .pipe(eslint.format(eslintStylish))
-    .pipe(gulp.dest(path.api.cwd));
-  }));
-
-  // modules
-  gulp.src(path.modules.src)
-    .pipe(watch(function(files) {
-    return files
-    .pipe(esformatter())
-    .pipe(eslint())
-    .pipe(eslint.format(eslintStylish))
-    .pipe(gulp.dest(path.modules.cwd));
-  }));
-
-  // tasks
-  gulp.src(path.tasks.src)
-    .pipe(watch(function(files) {
-    return files
-    .pipe(esformatter())
-    .pipe(eslint())
-    .pipe(eslint.format(eslintStylish))
-    .pipe(gulp.dest(path.tasks.cwd));
-  }));
-
-  // tests
-  gulp.src(path.tests.src)
-    .pipe(watch(function(files) {
-    return files
-    .pipe(esformatter())
-    .pipe(eslint())
-    .pipe(eslint.format(eslintStylish))
-    .pipe(gulp.dest(path.tests.cwd));
-  }));
 
 });

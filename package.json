@@ -16,8 +16,7 @@
   "bugs": {
     "url": "https://github.com/yoshuawuyts/centurion/issues"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "backbone": "~1.1.0",
     "eslint-stylish": "~0.2.0",
@@ -43,6 +42,7 @@
     "rework-calc": "~0.2.1",
     "rework-npm": "~0.3.0",
     "rework-vars": "~2.0.2",
-    "tiny-lr": "0.0.5"
+    "tiny-lr": "0.0.5",
+    "event-stream": "~3.1.0"
   }
 }
