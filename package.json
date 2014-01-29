@@ -1,6 +1,6 @@
 {
   "name": "Centurion",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A tiny gulp configuration",
   "main": "api/server.js",
   "scripts": {
