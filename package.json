@@ -1,5 +1,5 @@
 {
-  "name": "Centurion",
+  "name": "centurion",
   "version": "0.0.1",
   "description": "A tiny gulp configuration",
   "main": "api/server.js",
