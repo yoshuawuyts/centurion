@@ -22,12 +22,10 @@ require('./tasks/vendor');   // concat
  * Default task
  */
 
-module.exports = gulp.task('default', function() {
-  gulp.run( 
-    'vendor',
-    'modules',
-    'static',
-    'styles',
-    'tests' 
-  );
-});
+module.exports = gulp.task('default', [
+  'vendor',
+  'modules',
+  'static',
+  'styles',
+  'tests' 
+]);
