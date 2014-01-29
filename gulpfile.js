@@ -31,7 +31,4 @@ module.exports = gulp.task('default', function() {
     'lint',
     'tests' 
   );
-  gulp.run(
-//    'server'
-  );
 });
