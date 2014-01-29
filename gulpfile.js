@@ -10,7 +10,7 @@ var gulp = require('gulp');
  * Import tasks
  */
 
-require('./tasks/lint');    // esformatter, eslint
+// require('./tasks/lint');    // esformatter, eslint
 require('./tasks/modules'); // browserify, uglify
 require('./tasks/server');  // nodemon
 require('./tasks/static');  // copy fonts + images
@@ -28,7 +28,6 @@ module.exports = gulp.task('default', function() {
     'modules',
     'static',
     'styles',
-    'lint',
     'tests' 
   );
 });
