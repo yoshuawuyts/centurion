@@ -17,7 +17,7 @@ tests   // mocha
 
 ## Config
 __gulpfile.js__
-````
+````js
 'use strict';
 
 /**
