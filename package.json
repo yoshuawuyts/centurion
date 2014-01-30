@@ -21,9 +21,9 @@
   "dependencies": {
     "eslint-stylish": "~0.2.0",
     "gulp": "~3.5.0",
-    "gulp-autoprefixer": "0.0.4",
+    "gulp-autoprefixer": "0.0.5",
     "gulp-batch": "~0.4.0",
-    "gulp-browserify": "~0.3.3",
+    "gulp-browserify": "~0.4.0",
     "gulp-concat": "~2.1.7",
     "gulp-csso": "~0.2.3",
     "gulp-esformatter": "~0.1.0",
