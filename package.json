@@ -5,7 +5,9 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "gulp tests",
-    "start": ""
+    "start": "",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -35,17 +37,19 @@
     "gulp-rename": "~0.2.1",
     "gulp-rework": "~0.2.0",
     "gulp-uglify": "~0.2.0",
-    "gulp-watch": "~0.5.0",
+    "gulp-watch": "1.0.0",
     "rework-breakpoints": "~0.6.0",
     "rework-calc": "~0.2.1",
     "rework-npm": "~0.3.0",
     "rework-vars": "~2.0.2",
     "tiny-lr": "0.0.5",
-    "event-stream": "~3.1.0"
+    "event-stream": "~3.1.0",
+    "snyk": "^1.17.5"
   },
   "devDependencies": {
     "mocha": "~1.17.0",
     "gulp-debug": "~0.1.2"
   },
-  "homepage": "https://github.com/yoshuawuyts/centurion"
+  "homepage": "https://github.com/yoshuawuyts/centurion",
+  "snyk": true
 }
