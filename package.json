@@ -40,7 +40,7 @@
     "rework-calc": "~0.2.1",
     "rework-npm": "~0.3.0",
     "rework-vars": "~2.0.2",
-    "tiny-lr": "0.0.5",
+    "tiny-lr": "1.0.0",
     "event-stream": "~3.1.0"
   },
   "devDependencies": {
