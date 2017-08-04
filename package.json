@@ -30,7 +30,7 @@
     "gulp-eslint": "~0.1.1",
     "gulp-grep-stream": "0.0.2",
     "gulp-livereload": "~0.2.0",
-    "gulp-mocha": "~0.4.0",
+    "gulp-mocha": "~3.0.0",
     "gulp-nodemon": "0.1.2",
     "gulp-rename": "~0.2.1",
     "gulp-rework": "~0.2.0",
